@@ -1,0 +1,11 @@
+directory: /beets/music
+library: /run/beets/musiclibrary.db
+import:
+  move: no
+plugins: convert fetchart discogs edit
+fetchart:
+  cautious: true
+  maxwidth: 300
+  enforce_ratio: true
+  store_source: true
+

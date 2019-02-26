@@ -1,0 +1,18 @@
+version: "3.3"
+
+services:
+  app:
+    stdin_open: true
+    tty: true
+    image: egoexpress/beets
+    command: /bin/bash
+    restart: on-failure:10
+    volumes:
+      - data:/run/beets
+      - input:/beets/input
+      - music:/beets/music
+
+volumes:
+  data:
+  input:
+  music:
