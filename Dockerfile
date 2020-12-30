@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 
 LABEL maintainer "Bjoern Stierand <bjoern-github@innovention.de>"
 
@@ -7,9 +7,9 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
     apt-get install -y -qq --no-install-recommends \
       locales \
-      python3-minimal \
-      python3-pip \
-      python3-setuptools \
+      python3.9-minimal \
+      python3.9-pip \
+      python3.9-setuptools \
       vim-tiny && \
     rm -rf /var/lib/apt/lists/*
 
